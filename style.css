@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 :root {
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
+    /* Atualizando as cores */
+    --cor-fundo: #F4F4F4;              /* Fundo claro */
+    --cor-principal: #4A90E2;          /* Azul claro */
+    --cor-secundaria: #50E3C2;         /* Verde água */
+    --cor-destaque: #FF8C00;           /* Laranja vibrante */
+    --cor-texto: #333333;              /* Texto escuro */
 }
   
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    background-color: var(--cor-fundo); /* Usando o fundo claro */
+    color: var(--cor-texto);             /* Texto escuro */
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
@@ -18,45 +17,47 @@ body {
     min-height: 100vh;
 }
 
-.caixa-principal{
-    background-color: var(--cor-principal);
+.caixa-principal {
+    background-color: var(--cor-principal);  /* Azul claro para o fundo da caixa */
     width: 90%;
     max-width: 600px;
     text-align: center;
     padding: 20px;
+    border-radius: 10px;
 }
 
-h1, .caixa-perguntas, .caixa-resultado{
+h1, .caixa-perguntas, .caixa-resultado {
     font-family: 'Chakra Petch', sans-serif;
 }
 
 h1 {
-    color: var(--cor-destaque);
+    color: var(--cor-destaque);  /* Usando o laranja vibrante para o título */
 }
 
 button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
+    background-color: var(--cor-secundaria);  /* Verde água para os botões */
+    color: var(--cor-texto);                   /* Texto escuro nos botões */
     border: none;
     border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s;
+    font-size: 1.2em;
 }
 
 button:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+    background-color: var(--cor-destaque); /* Laranja vibrante no hover */
+    color: var(--cor-principal);           /* Azul claro no texto quando hover */
 }
 
-.caixa-resultado{
+.caixa-resultado {
     display: none;
 }
 
-.caixa-resultado.mostrar{
+.caixa-resultado.mostrar {
     display: block;
 }
 
-.caixa-alternativas{
+.caixa-alternativas {
     display: flex;
     flex-direction: column;
     gap: 10px;
