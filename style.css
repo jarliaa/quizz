@@ -1,64 +1,72 @@
 :root {
-    /* Atualizando as cores */
-    --cor-fundo: #F4F4F4;              /* Fundo claro */
-    --cor-principal: #4A90E2;          /* Azul claro */
-    --cor-secundaria: #50E3C2;         /* Verde água */
-    --cor-destaque: #FF8C00;           /* Laranja vibrante */
-    --cor-texto: #333333;              /* Texto escuro */
+  /* Atualizando as cores */
+  --cor-fundo: #F4F4F4;        /* Fundo claro */
+  --cor-principal: #4A90E2;    /* Azul claro */
+  --cor-secundaria: #50E3C2;   /* Verde água */
+  --cor-destaque: #FF8C00;     /* Laranja vibrante */
+  --cor-texto: #333333;        /* Texto escuro */
 }
-  
+
+* { box-sizing: border-box; }
+
 body {
-    background-color: var(--cor-fundo); /* Usando o fundo claro */
-    color: var(--cor-texto);             /* Texto escuro */
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .caixa-principal {
-    background-color: var(--cor-principal);  /* Azul claro para o fundo da caixa */
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+  background-color: var(--cor-principal);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h1, .caixa-perguntas, .caixa-resultado {
-    font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 h1 {
-    color: var(--cor-destaque);  /* Usando o laranja vibrante para o título */
+  color: var(--cor-destaque);
+  margin-top: 0;
 }
 
 button {
-    background-color: var(--cor-secundaria);  /* Verde água para os botões */
-    color: var(--cor-texto);                   /* Texto escuro nos botões */
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
-    font-size: 1.2em;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 15px;
+  padding: 15px 18px;
+  transition: background-color 0.3s;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--cor-destaque); /* Laranja vibrante no hover */
-    color: var(--cor-principal);           /* Azul claro no texto quando hover */
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
 }
 
+.caixa-perguntas,
+.caixa-alternativas,
 .caixa-resultado {
-    display: none;
-}
-
-.caixa-resultado.mostrar {
-    display: block;
+  display: none; /* Estados iniciais controlados via JS */
 }
 
 .caixa-alternativas {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.texto-pergunta {
+  margin-bottom: 10px;
 }

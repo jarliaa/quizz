@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Você decide seu animal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Você decide seu animal</title>
 </head>
-
 <body>
-    <div class="caixa-principal">
-        <h1>Você decide seu animal</h1>
-        
-        <!-- Tela Inicial -->
-        <div class="tela-inicial">
-            <p>Você está trancado em uma sala misteriosa, cheia de enigmas. Sua missão é responder a 5 perguntas para descobrir qual animal você representa. Cada resposta te aproxima de uma pista crucial que te levará à solução final.</p>
-            <button class="iniciar-btn">Iniciar</button>
-        </div>
+  <div class="caixa-principal">
+    <h1>Você decide seu animal</h1>
 
-        <!-- Caixa de Perguntas -->
-        <div class="caixa-perguntas">
-            <!-- Perguntas serão carregadas aqui via JavaScript -->
-        </div>
-
-        <!-- Caixa de Alternativas -->
-        <div class="caixa-alternativas">
-            <!-- Alternativas para cada pergunta serão carregadas aqui -->
-        </div>
-
-        <!-- Caixa de Resultado (inicialmente oculta) -->
-        <div class="caixa-resultado" style="display: none;">
-            <p class="texto-resultado"></p>
-            <button class="novamente-btn">Jogar novamente</button>
-        </div>
-
+    <!-- Tela Inicial -->
+    <div class="tela-inicial">
+      <p>
+        Você está trancado em uma sala misteriosa, cheia de enigmas. Sua missão é responder a 5 perguntas para descobrir qual animal você representa. Cada resposta te aproxima de uma pista crucial que te levará à solução final.
+      </p>
+      <button class="iniciar-btn">Iniciar</button>
     </div>
 
-    <!-- Scripts JavaScript -->
-    <script type="module" src="js/aleatorio.js"></script>
-    <script type="module" src="js/perguntas.js"></script>
-    <script type="module" src="js/script.js"></script>
-</body>
+    <!-- Caixa de Perguntas -->
+    <div class="caixa-perguntas"></div>
 
+    <!-- Caixa de Alternativas -->
+    <div class="caixa-alternativas"></div>
+
+    <!-- Caixa de Resultado -->
+    <div class="caixa-resultado">
+      <p class="texto-resultado"></p>
+      <button class="novamente-btn">Jogar novamente</button>
+    </div>
+  </div>
+
+  <!-- Scripts JavaScript (mantendo a pasta JS) -->
+  <script type="module" src="./JS/aleatorio.js"></script>
+  <script type="module" src="./JS/perguntas.js"></script>
+  <script type="module" src="./JS/script.js"></script>
+</body>
 </html>
